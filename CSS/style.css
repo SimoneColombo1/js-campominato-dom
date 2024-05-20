@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} 
+
+main{
+    background-color:#7fffd4 ;
+    height: 88vh;
+}
+#griglia{
+   width: 800px;
+  margin-left: 37rem;
+  padding-top: 1rem;
+}
+
+.square{
+display: inline-block;
+height: 80px;
+width: 80px;
+
+ text-align: center;
+
+   
+    border: solid 1px black;
+}
+
+.active{
+
+    background-color: red;
+}
+
+h1{
+    font-size: 3rem;
+}
+button{
+    display: inline;
+    height: 1.5rem;
+    margin: 1rem;
+    
+}
+
+img{
+
+height: 60px;
+width: 60px;
+vertical-align:middle;
+
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer{
+    margin: 1rem;
+}
