@@ -11,3 +11,6 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 difficoltà 1 ⇒ 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe;
 difficoltà 2 ⇒ 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
 difficoltà 3 ⇒ 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
+
+------------------------------------------------------------------------------------------------------------------------------
+creo una blacklist con i numeri che non voglio siano bombe, poi creo una funzione che genera numeri casuali che non fanno parte della blacklist infine aggiungo al click un controllo che se l'utente ha cliccato su uno dei numeri generati casualmente coloro la casella di rosso e finisco la partita altrimenti vado avanti e incremento il punteggio. 
