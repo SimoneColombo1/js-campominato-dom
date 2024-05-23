@@ -27,7 +27,7 @@ width: 80px;
 
 .active{
 
-    background-color: red;
+    background-color: blue;
 }
 
 h1{
@@ -55,4 +55,9 @@ header{
 
 footer{
     margin: 1rem;
+}
+
+
+.lose{
+    background-color: red;
 }

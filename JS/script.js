@@ -11,9 +11,24 @@ const StartButton= document.querySelector('header #start');
 
 StartButton.addEventListener('click',function(){
 //< blacklist
-
+let blacklist=[ 12,71,82,94,60,31,80];
 //todo ciclo for//
 griglia.innerHTML="";
+//> Creazione Bombe
+let Bombe=[];
+
+
+for(let g=0; g<16;g++){
+    let bomb= Math.floor(Math.random()*100);
+    if(bomb != blacklist[g]){
+     Bombe.push(bomb);
+
+    }
+}
+
+console.log(Bombe);
+
+
 
 for( let i=0 ; i<100;i++ ){
 
@@ -31,18 +46,41 @@ const elementi= document.createElement('span');
 elementi.append(i+1);
 quadrati.appendChild(elementi);
 
-let punteggio=0;
-
 //^ Colorare quadrati al click//
-
+let punteggio=0;
 quadrati.addEventListener('click', function(){
-     punteggio++;
-    quadrati.classList.add('active');
     
-    console.log(i+1);
-    console.log(punteggio);
+     if(quadrati[i]===Bombe[i]){
+        alert('hai perso');    
+        quadrati.classList.add('lose');
+        griglia.innerHTML="";
+         
+
+
+     }
     
+    else {
+        punteggio++;
+        quadrati.classList.add('active');
+        console.log(punteggio);
+        console.log(i+1);
+        
+   
+
+    }
+        if(punteggio > 84){
+            alert('hai vinto');
+                 griglia.innerHTML="";
+
+        }
 })
+
+
+
+
+
+
+
 
 griglia.appendChild(quadrati);
 }
@@ -50,6 +88,15 @@ griglia.appendChild(quadrati);
 
 
 
+    
+    
+    
+    
+    
+
+    
+  
+})
 
 
 
@@ -61,10 +108,9 @@ griglia.appendChild(quadrati);
 
 
 
-}
 
 
 
 
 
-)
+
